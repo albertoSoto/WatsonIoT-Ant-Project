@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.cit.usacycling.ant">
+
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".USACyclingApplication"
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup">
+        <activity
+            android:name=".ui.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.ExceptionActivity"
+            android:label="@string/title_activity_exception"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.DeviceScanActivity"
+            android:label="@string/title_activity_device_scan"
+            android:parentActivityName=".ui.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cit.usacycling.ant.ui.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ui.StatisticsActivity"
+            android:label="@string/title_activity_statistics"
+            android:parentActivityName=".ui.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cit.usacycling.ant.ui.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ui.ConfigureBPMActivity"
+            android:label="@string/title_activity_configure_bpm"
+            android:parentActivityName=".ui.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.IoTBasicConnectionSetActivity"
+            android:label="@string/title_activity_io_tbasic_connection_set"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.BpmParametersActivity"
+            android:label="@string/title_activity_bpm_parameters"
+            android:parentActivityName=".ui.MainActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name=".background.services.HeartRateMonitorService" />
+        <service android:name=".mock.services.HeartRateMonitorServiceMock" />
+        <service android:name=".background.services.BikePowerWattsMonitorService" />
+        <service android:name=".mock.services.BikePowerWattsMonitorServiceMock" />
+        <service android:name=".global.DataPushManager" />
+        <service android:name=".global.StatusPushManager" />
+        <service android:name=".background.mqtt.MQTTService" />
+        <service android:name=".background.services.BSXInsightsService" />
+        <service android:name=".mock.services.BSXInsightsServiceMock" />
+        <service android:name=".background.services.DeviceSearchService" />
+        <service android:name=".mock.services.DeviceSearchServiceMock" />
+
+        <activity android:name=".ui.MqttSettingsActivity"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <LinearLayout
+        android:id="@+id/llPowerOne"
+        style="@style/SetSloperRowLayout">
+
+        <TextView
+            android:id="@+id/tvPowerOne"
+            style="@style/TextViewSlopeSet"
+            android:labelFor="@+id/etPowerOne"
+            android:tag="tv" />
+
+        <EditText
+            android:id="@+id/etPowerOne"
+            style="@style/EditTextSlopeSet"
+            android:hint="@string/not_provided_slope_hint"
+            android:tag="et" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llPowerTwo"
+        style="@style/SetSloperRowLayout">
+
+        <TextView
+            android:id="@+id/tvPowerTwo"
+            style="@style/TextViewSlopeSet"
+            android:labelFor="@+id/etPowerTwo"
+            android:tag="tv" />
+
+        <EditText
+            android:id="@+id/etPowerTwo"
+            style="@style/EditTextSlopeSet"
+            android:hint="@string/not_provided_slope_hint"
+            android:tag="et" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llPowerThree"
+        style="@style/SetSloperRowLayout">
+
+        <TextView
+            android:id="@+id/tvPowerThree"
+            style="@style/TextViewSlopeSet"
+            android:labelFor="@+id/etPowerThree"
+            android:tag="tv" />
+
+        <EditText
+            android:id="@+id/etPowerThree"
+            style="@style/EditTextSlopeSet"
+            android:hint="@string/not_provided_slope_hint"
+            android:tag="et" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llPowerFour"
+        style="@style/SetSloperRowLayout">
+
+        <TextView
+            android:id="@+id/tvPowerFour"
+            style="@style/TextViewSlopeSet"
+            android:labelFor="@+id/etPowerFour"
+            android:tag="tv" />
+
+        <EditText
+            android:id="@+id/etPowerFour"
+            style="@style/EditTextSlopeSet"
+            android:hint="@string/not_provided_slope_hint"
+            android:tag="et" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btnSet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SET" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="cancel" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="device_list_red">@android:color/holo_red_light</color>
+    <color name="device_list_green">@android:color/holo_green_light</color>
+    <color name="device_list_orange">@android:color/holo_orange_light</color>
+</resources>

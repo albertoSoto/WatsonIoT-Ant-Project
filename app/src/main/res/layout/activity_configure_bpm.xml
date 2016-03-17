@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:layout_marginBottom="1dp"
+        android:text="Matches burned terminal"
+        android:textColor="@android:color/black" />
+
+    <ScrollView
+        android:id="@+id/consoleScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@android:color/black"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/tvConsole"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </ScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/black" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llBPM1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvPowerMeter1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="power 1"
+                    android:textAlignment="textStart"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@android:color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="3">
+
+                    <ImageButton
+                        android:id="@+id/ibPM1Down"
+                        android:layout_width="50dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="end"
+                        android:layout_weight="1"
+                        android:src="@android:drawable/arrow_down_float" />
+
+                    <TextView
+                        android:id="@+id/tvBPM1PowerValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="50 W"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <ImageButton
+                        android:id="@+id/ibPM1Up"
+                        android:layout_width="50dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="start"
+                        android:layout_weight="1"
+                        android:src="@android:drawable/arrow_up_float" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="3">
+
+                    <ImageButton
+                        android:id="@+id/ibC1Down"
+                        android:layout_width="50dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="end"
+                        android:layout_weight="1"
+                        android:src="@android:drawable/arrow_down_float" />
+
+                    <TextView
+                        android:id="@+id/tvC1CadenceValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="50 RPM"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <ImageButton
+                        android:id="@+id/ibC1Up"
+                        android:layout_width="50dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="start"
+                        android:layout_weight="1"
+                        android:src="@android:drawable/arrow_up_float" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llBPM2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvPowerMeter2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="power 2"
+                    android:textAlignment="textStart"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@android:color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="3">
+
+                    <ImageButton
+                        android:id="@+id/ibPM2Down"
+                        android:layout_width="50dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="end"
+                        android:layout_weight="1"
+                        android:src="@android:drawable/arrow_down_float" />
+
+                    <TextView
+                        android:id="@+id/tvBPM2PowerValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="50 W"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <ImageButton
+                        android:id="@+id/ibPM2Up"
+                        android:layout_width="50dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="start"
+                        android:layout_weight="1"
+                        android:src="@android:drawable/arrow_up_float" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="3">
+
+                    <ImageButton
+                        android:id="@+id/ibC2Down"
+                        android:layout_width="50dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="end"
+                        android:layout_weight="1"
+                        android:src="@android:drawable/arrow_down_float" />
+
+                    <TextView
+                        android:id="@+id/tvC2CadenceValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="50 RPM"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <ImageButton
+                        android:id="@+id/ibC2Up"
+                        android:layout_width="50dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="start"
+                        android:layout_weight="1"
+                        android:src="@android:drawable/arrow_up_float" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llBPM3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvPowerMeter3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="power 3"
+                    android:textAlignment="textStart"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@android:color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="3">
+
+                    <ImageButton
+                        android:id="@+id/ibPM3Down"
+                        android:layout_width="50dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="end"
+                        android:layout_weight="1"
+                        android:src="@android:drawable/arrow_down_float" />
+
+                    <TextView
+                        android:id="@+id/tvBPM3PowerValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="50 W"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+                    <ImageButton
+                        android:id="@+id/ibPM3Up"
+                        android:layout_width="50dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="start"
+                        android:layout_weight="1"
+                        android:src="@android:drawable/arrow_up_float" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="3">
+
+                    <ImageButton
+                        android:id="@+id/ibC3Down"
+                        android:layout_width="50dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="end"
+                        android:layout_weight="1"
+                        android:src="@android:drawable/arrow_down_float" />
+
+                    <TextView
+                        android:id="@+id/tvC3CadenceValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="50 RPM"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <ImageButton
+                        android:id="@+id/ibC3Up"
+                        android:layout_width="50dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="start"
+                        android:layout_weight="1"
+                        android:src="@android:drawable/arrow_up_float" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llBPM4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvPowerMeter4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="power 4"
+                    android:textAlignment="textStart"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@android:color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="3">
+
+                    <ImageButton
+                        android:id="@+id/ibPM4Down"
+                        android:layout_width="50dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="end"
+                        android:layout_weight="1"
+                        android:src="@android:drawable/arrow_down_float" />
+
+                    <TextView
+                        android:id="@+id/tvBPM4PowerValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="50 W"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <ImageButton
+                        android:id="@+id/ibPM4Up"
+                        android:layout_width="50dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="start"
+                        android:layout_weight="1"
+                        android:src="@android:drawable/arrow_up_float" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="3">
+
+                    <ImageButton
+                        android:id="@+id/ibC4Down"
+                        android:layout_width="50dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="end"
+                        android:layout_weight="1"
+                        android:src="@android:drawable/arrow_down_float" />
+
+                    <TextView
+                        android:id="@+id/tvC4CadenceValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="50 RPM"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <ImageButton
+                        android:id="@+id/ibC4Up"
+                        android:layout_width="50dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="start"
+                        android:layout_weight="1"
+                        android:src="@android:drawable/arrow_up_float" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+

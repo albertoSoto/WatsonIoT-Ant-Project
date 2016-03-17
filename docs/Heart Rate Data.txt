@@ -1,0 +1,78 @@
+1. Heart Rate Data - TRANSMITTED
+1.1. computedHeartRate
+1.2. Data State
+1.2.1. ZERO_DETECTED
+1.2.2. INITIAL_VALUE
+1.3. estTimestamp
+
+Format: 
+{
+	"source": "Heart Rate Monitor Service",
+	"type": "Data",
+	"data": {
+		"computedHeartRate": <int>,
+		"message_type": "Heart Rate"
+		"Data State": {
+			"ZERO_DETECTED": <boolean>,
+			"INITIAL_VALUE": <boolean>
+			"estTimestamp": <int>
+		}
+	},
+	timestamp: <Unix timestamp>	
+}
+
+2. Page 4 Additional Data - NOT TRANSMITTED
+2.1. manufacturerSpecificByte
+2.2. previousHeartBeatEventTime
+2.3. estTimestamp
+
+3. Cumilative Operating Time - NOT TRANSMITTED
+3.1. cumulativeOperatingTime
+3.2. estTimestamp
+
+4. Manufacturer and Serial - NOT TRANSMITTED
+4.1. manufacturerID
+4.2. serialNumber
+
+5. VersionAndModel - NOT TRANSMITTED
+5.1. hardwareVersion
+5.2. softwareVersion
+5.3. modelNumber
+5.4. estTimestamp
+
+6. Calculated RR Interval - TRANSMITTED
+6.1. rrInterval
+6.2. Data State
+6.2.1. DATA_SOURCE_CACHED
+6.2.2. DATA_SOURCE_PAGE_4
+6.3. estTimestamp
+
+Format: 
+{
+	"source": "Heart Rate Monitor Service",
+	"type": "Data",
+	"data": {
+		"rrInterval": <int>,
+		"message_type": "RR Interval"
+		"Data State": {
+			"DATA_SOURCE_CACHED": <boolean>,
+			"DATA_SOURCE_PAGE_4": <boolean>
+			"estTimestamp": <int>
+		}
+	},
+	timestamp: <Unix timestamp>	
+}
+
+
+7. RSSI Event - NOT TRANSMITTED
+7.1. rssi - dBm
+7.2.estTimestamp
+
+8. Device State - TRANSMITTED
+8.1. state - newDeviceState
+Format: 
+{
+	"source": "Heart Rate Monitor Service",
+	"type": "State",
+  "state": <Device State>
+}

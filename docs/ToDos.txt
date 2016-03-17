@@ -1,0 +1,10 @@
+Short Term:
+1. Sometimes "ADAPTER_NOT_DETECTED" error shows up on Nexus 5, user might have to restart the app. Check with other devices.
+2. Get rid of the Options Menu
+3. Provide a check-box for each device in the listview to enable selection of multiple devices (One of each type, extension in long-term todos).
+4. Add location information in transmission packet
+5. If MQTT Publish failed, store the message to retry.
+6. UI Update
+
+Long Term:
+1. Extend the services to be able to connect to multiple devices. Example – heart rate monitor should be able to connect to multiple heart rate monitors
